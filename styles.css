@@ -1,0 +1,130 @@
+body {
+    background-color: #121212; /* negro suave */
+    color: #f0f0f0; /* blanco grisáceo para menos contraste */
+    font-family: sans-serif; /* Fuentes predeterminadas sin importar desde Google Fonts */
+    padding: 40px 20px;
+    line-height: 1.6; /* mejora la lectura */
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #00bcd4;
+}
+
+/* Subtítulos */
+h3 {
+    color: #ff9800;
+    margin-top: 40px;
+}
+
+/* Estilos para los títulos clicables (Habilidades / Educación) */
+.toggle-header {
+    cursor: pointer; /* Cambia el cursor a manito */
+    transition: all 0.3s ease;
+}
+
+.toggle-header:hover {
+    color: #ffc107; /* Un amarillo más claro cuando pasas el mouse */
+    text-decoration: underline;
+}
+
+/* Párrafo general */
+p {
+    font-size: 20px;
+    max-width: 700px;
+}
+
+/* Contenedor de las imágenes */
+.imagenes-container {
+    display: flex;             /* Utilizamos Flexbox para alinear las imágenes */
+    justify-content: flex-start; /* Alinea las imágenes al inicio */
+    gap: 10px;                 /* Espacio entre las imágenes */
+    margin-top: 20px;          /* Espacio superior para separar las imágenes de los títulos */
+}
+
+/* Estilo de las imágenes */
+.Profile_image {
+    width: 200px;               /* Tamaño reducido de las imágenes (puedo ajustar este valor) */
+    height: auto;              /* Mantiene la relación de aspecto */
+    border-radius: 40px;        /* Bordes redondeados */
+}
+
+/* Ajuste para el título Ing. */
+#honorific {
+    font-size: 18px;
+    font-weight: normal;
+    color: #ccc;
+    margin-top: -10px;
+}
+
+/* Enlaces */
+a {
+    color: #4fc3f7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Listas más separadas */
+ul, ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* Ocultar las listas al inicio */
+#skills-list,
+#education-list {
+    display: none;
+}
+
+/* Secciones separadas visualmente */
+section {
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333;
+}
+
+/* Flexbox para las secciones Habilidades y Educación */
+.info {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre las secciones */
+    align-items: flex-start; /* Alinea las secciones al principio (arriba) */
+    gap: 20px; /* Espacio entre las secciones */
+}
+
+/* Que las secciones ocupen el mismo espacio */
+.habilidades, .educacion {
+    flex: 1; /* Hace que ambas secciones tengan el mismo tamaño */
+}
+
+/* Ajustes para pantallas pequeñas (responsive) */
+@media (max-width: 768px) {
+    .info {
+        flex-direction: column; /* Apila las secciones en una columna */
+    }
+
+    /* Imagen del perfil centrada en pantallas pequeñas */
+    .profile-image {
+        float: none;
+        display: block;
+        margin: 0 auto 20px auto;
+    }
+
+    body {
+        padding: 20px;
+    }
+
+    /* Centrar las imágenes en pantallas pequeñas */
+    .imagenes-container {
+        justify-content: center; /* Centra las imágenes en pantallas pequeñas */
+    }
+
+    .Profile_image {
+        width: 60px;             /* Hace las imágenes más pequeñas en pantallas pequeñas */
+    }
+}
